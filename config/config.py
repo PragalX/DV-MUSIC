@@ -21,7 +21,8 @@ load_dotenv()
 API_ID = int(getenv("API_ID", ""))
 
 API_HASH = getenv("API_HASH")
-
+CLIENT_ID = getenv('OAUTH2_CLIENT_ID')
+CLIENT_SECRET = getenv('OAUTH2_CLIENT_SECRET')
 
 ## Get it from @Botfather in Telegram.
 BOT_TOKEN = getenv("BOT_TOKEN")
@@ -70,12 +71,12 @@ SONG_DOWNLOAD_DURATION = int(
 
 
 # You'll need a Private Group ID for this.
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", ""))
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1002464493013"))
 
 
 # Your User ID.
 OWNER_ID = list(
-    map(int, getenv("OWNER_ID", "11679112664").split())
+    map(int, getenv("OWNER_ID", "7055536651").split())
 )  # Input type must be interger
 
 
@@ -107,7 +108,7 @@ GIT_TOKEN = getenv(
 )
 
 # Token allow for access youtube songs. [ True = use token data, False = use cookies ]
-TOKEN_ALLOW = os.getenv("TOKEN_ALLOW", "False")
+TOKEN_ALLOW = os.getenv("TOKEN_ALLOW", "True")
 
 # Auto Gcast/Broadcast Handler, Write:- [On / Off] During Hosting.
 AUTO_GCAST = os.getenv("AUTO_GCAST", "off")
